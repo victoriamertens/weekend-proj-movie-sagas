@@ -1,5 +1,8 @@
 .header {
-  background-color: black;
-  color: white;
+  background-image: linear-gradient(purple, rgb(23, 23, 136));
+  color: whitesmoke;
   padding: 25px;
+  border: 3px solid rgb(155, 117, 167);
+  margin: 10px;
+  border-radius: 5px;
 }

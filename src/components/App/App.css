@@ -1,13 +1,14 @@
 .App {
   text-align: center;
-  background-image: url('./galaxy_background.jpg');
 }
-
+body {
+  background: rgb(23, 23, 136);
+}
 .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: whitesmoke;
 }
 
 .App-title {

@@ -25,6 +25,9 @@ function Details() {
   console.log('details:', details);
   console.log('genres:', genres);
   console.log('hi');
+  const returnPage = () => {
+    history.push('/');
+  };
 
   const loading = !details;
   if (loading) {
@@ -35,17 +38,22 @@ function Details() {
   //   history.push('/');
   // };
   return (
-    <div>
-      <h2>{details.title}</h2>
-      <h3>Description:</h3>
-      <p>{details.description}</p>
-      <img src={details.poster} alt={details.title} />
-      <h3>Genres:</h3>
-      <ul>
-        {genres.map((genre) => {
-          return <li>{genre.name}</li>;
-        })}
-      </ul>
+    <div class="details">
+      <div class="text">
+        <h2>{details.title}</h2>
+
+        <p>{details.description}</p>
+        <h3>Genres:</h3>
+        <ul>
+          {genres.map((genre) => {
+            return <li>{genre.name}</li>;
+          })}
+        </ul>
+        <button onClick={returnPage}>Return to Main Page</button>
+      </div>
+      <div class="poster">
+        <img src={details.poster} alt={details.title} />
+      </div>
     </div>
   );
 }
