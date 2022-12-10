@@ -32,9 +32,11 @@ function* getMovieDetails(action) {
   try {
     console.log(action.payload);
     const response = yield axios.get(`/api/movie/${action.payload}`);
+    console.log('Response=', response);
     yield put({ type: 'SET_DETAILS', payload: response.data });
     //need to get the genres too
     const genreResponse = yield axios.get(`/api/genre/${action.payload}`);
+    console.log('genreResponse:', genreResponse);
     console.log(genreResponse.data);
     yield put({ type: 'SET_GENRES', payload: genreResponse.data });
   } catch (error) {

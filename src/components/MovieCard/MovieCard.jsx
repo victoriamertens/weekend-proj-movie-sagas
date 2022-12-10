@@ -6,8 +6,8 @@ function MovieCard({ movie }) {
   const history = useHistory();
   const detailsPage = () => {
     console.log('Selected id:', movie.id);
+    dispatch({ type: 'GET_MOVIE_DETAILS', payload: movie.id });
     history.push(`/details/${movie.id}`);
-    //dispatch({ type: 'GET_MOVIE_DETAILS', payload: movie.id });
   };
   return (
     <div key={movie.id}>
