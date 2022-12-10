@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import './Details.css';
 
 function Details() {
   const { id } = useParams();
@@ -40,6 +41,11 @@ function Details() {
       <p>{details.description}</p>
       <img src={details.poster} alt={details.title} />
       <h3>Genres:</h3>
+      <ul>
+        {genres.map((genre) => {
+          return <li>{genre.name}</li>;
+        })}
+      </ul>
     </div>
   );
 }
