@@ -12,7 +12,7 @@ Project Plan / Tasks :
   __Write the Query Language to Join the right tables and pull all the genres 
 
 
-[__] Make Movies into Card Components 
+[_x_] Make Movies into Card Components 
   __ include an onClick for the poster to move to details page 
 
 [__]Make Details Page Component 
