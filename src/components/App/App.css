@@ -1,13 +1,14 @@
 .App {
   text-align: center;
 }
-
-
+body {
+  background: rgb(23, 23, 136);
+}
 .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: whitesmoke;
 }
 
 .App-title {
@@ -19,6 +20,10 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

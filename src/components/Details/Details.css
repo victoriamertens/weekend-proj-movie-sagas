@@ -1,0 +1,31 @@
+.details {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: whitesmoke;
+  border: 1px solid lightgrey;
+  margin: 25px;
+  border-radius: 5px;
+  box-shadow: 10px 15px 15px rgb(17, 17, 82);
+}
+
+.text {
+  text-align: left;
+  margin: 15px;
+}
+
+.poster {
+  margin: 25px;
+  display: flex;
+  align-items: flex-start;
+}
+
+button {
+  background-color: purple;
+  color: white;
+  padding: 5px;
+  border-radius: 7px;
+  border: none;
+}
+button:hover {
+  background-color: blue;
+}

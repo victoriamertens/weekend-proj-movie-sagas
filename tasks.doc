@@ -1,23 +1,23 @@
 Project Plan / Tasks : 
 
-[__] Make generator functions in index.jsx 
-  __ GET_MOVIE_DETAILS to get one movie's details 
-  __ GET_MOVIE_GENRES to get all the movie's genres (SQL Query work)
+[_x_] Make generator functions in index.jsx 
+  _x_ GET_MOVIE_DETAILS to get one movie's details 
+  _x_ GET_MOVIE_GENRES to get all the movie's genres (SQL Query work)
 
-[__] Make reducer function in index.jsx 
-  __ movieDetailReducer as one object with all the movie details. 
+[_x_] Make reducer function in index.jsx 
+  _x_ movieDetailReducer as one object with all the movie details. 
 
-[__] WRite Get request in movie router at URL for id - get one movie 
-[__] Write GET request in genres router, at URL for id 
-  __Write the Query Language to Join the right tables and pull all the genres 
+[_x_] WRite Get request in movie router at URL for id - get one movie 
+[_x_] Write GET request in genres router, at URL for id 
+  _x_Write the Query Language to Join the right tables and pull all the genres 
 
 
 [_x_] Make Movies into Card Components 
   __ include an onClick for the poster to move to details page 
 
 [__]Make Details Page Component 
-  __ Add Route for Details Page 
-  __ Build component for Page 
+  _x_ Add Route for Details Page 
+  _x_ Build component for Page 
     __ include all details in data 
     __ add all genres 
   __ Pass id back with route 
