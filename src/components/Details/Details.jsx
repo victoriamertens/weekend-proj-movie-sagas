@@ -23,6 +23,12 @@ function Details() {
   const genres = reduxStore.genres;
   console.log('details:', details);
   console.log('genres:', genres);
+  console.log('hi');
+
+  const loading = !details;
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   // const returnHome = () => {
   //   history.push('/');
