@@ -16,7 +16,7 @@ function Details() {
 
   const getDetails = () => {
     console.log('Get Details not needed');
-    // dispatch({ type: 'GET_MOVIE_DETAILS', payload: id });
+    dispatch({ type: 'GET_MOVIE_DETAILS', payload: id });
   };
   const reduxStore = useSelector((store) => store);
 
@@ -34,9 +34,6 @@ function Details() {
     return <div>Loading...</div>;
   }
 
-  // const returnHome = () => {
-  //   history.push('/');
-  // };
   return (
     <div class="details">
       <div class="text">
