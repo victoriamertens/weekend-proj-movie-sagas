@@ -18,7 +18,7 @@ function* rootSaga() {
 }
 
 function* fetchAllMovies() {
-  // get all movies from the DB
+  // GET all movies from the DB
   try {
     const movies = yield axios.get('/api/movie');
     console.log('get all:', movies.data);
@@ -30,14 +30,11 @@ function* fetchAllMovies() {
 
 function* getMovieDetails(action) {
   try {
-    console.log(action.payload);
+    //get details for movie
     const response = yield axios.get(`/api/movie/${action.payload}`);
-    console.log('Response=', response);
     yield put({ type: 'SET_DETAILS', payload: response.data });
-    //need to get the genres too
+    //get the movie genres
     const genreResponse = yield axios.get(`/api/genre/${action.payload}`);
-    console.log('genreResponse:', genreResponse);
-    console.log(genreResponse.data);
     yield put({ type: 'SET_GENRES', payload: genreResponse.data });
   } catch (error) {
     alert(error);
@@ -46,7 +43,7 @@ function* getMovieDetails(action) {
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
 
-// Used to store movies returned from the server
+// Used to store all movies returned from the server
 const movies = (state = [], action) => {
   switch (action.type) {
     case 'SET_MOVIES':
@@ -65,7 +62,7 @@ const genres = (state = [], action) => {
       return state;
   }
 };
-
+//used to store singular movie details
 const details = (state = [], action) => {
   switch (action.type) {
     case 'SET_DETAILS':

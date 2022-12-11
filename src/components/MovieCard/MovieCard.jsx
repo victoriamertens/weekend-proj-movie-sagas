@@ -3,11 +3,8 @@ import { useHistory } from 'react-router-dom';
 import './MovieCard.css';
 
 function MovieCard({ movie }) {
-  const dispatch = useDispatch();
   const history = useHistory();
   const detailsPage = () => {
-    console.log('Selected id:', movie.id);
-    //dispatch({ type: 'GET_MOVIE_DETAILS', payload: movie.id });
     history.push(`/details/${movie.id}`);
   };
   return (

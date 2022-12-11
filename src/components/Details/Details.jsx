@@ -1,39 +1,37 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
 import './Details.css';
 
 function Details() {
   const { id } = useParams();
+  const reduxStore = useSelector((store) => store);
+  const details = reduxStore.details;
+  const genres = reduxStore.genres;
+  //invoke imports
   const dispatch = useDispatch();
   const history = useHistory();
-
+  //to have the GET run on pageload once
   useEffect(() => {
     getDetails();
-    console.log('Running Get details');
   }, []);
 
   const getDetails = () => {
-    console.log('Get Details not needed');
     dispatch({ type: 'GET_MOVIE_DETAILS', payload: id });
   };
-  const reduxStore = useSelector((store) => store);
 
-  const details = reduxStore.details[0];
-  const genres = reduxStore.genres;
-  console.log('details:', details);
-  console.log('genres:', genres);
-  console.log('hi');
   const returnPage = () => {
     history.push('/');
   };
 
+  //conditional to control render timing
+  //logic here is if variable details is undefined then axios GET request hasn't happened yet
+  //therefore it renders the Loading... message
+  //when the redux store updates, the page re-renders and will load the pull page details.
   const loading = !details;
   if (loading) {
     return <div>Loading...</div>;
   }
-
   return (
     <div class="details">
       <div class="text">

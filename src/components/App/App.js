@@ -15,9 +15,6 @@ function App() {
         <Route exact path="/details/:id">
           <Details />
         </Route>
-        {/* Details page */}
-
-        {/* Add Movie page */}
       </Router>
     </div>
   );

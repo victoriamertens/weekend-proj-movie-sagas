@@ -3,7 +3,6 @@ const router = express.Router();
 const pool = require('../modules/pool');
 
 router.get('/:id', (req, res) => {
-  console.log('in get for genres');
   let queryText = `
   SELECT "genres"."name" 
   from "movies" 
@@ -13,7 +12,6 @@ router.get('/:id', (req, res) => {
   pool
     .query(queryText, [req.params.id])
     .then((result) => {
-      console.log(result.rows);
       res.send(result.rows);
     })
     .catch((err) => {
